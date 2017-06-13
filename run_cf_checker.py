@@ -13,10 +13,10 @@ institute, model, experiment, frequency, realm, table, ensemble, version, variab
 
 odir = os.path.join(GWSDIR, institute, model, experiment, table, version)
 if not os.path.exists(odir):
-    os.path.mkdir(odir)
+    os.makedirs(odir)
 
-cf_out_file = os.path.join(odir, ncfile.replace(".nc", "cf-log"))
-cf_err_file = os.path.join(odir, ncfile.replace(".nc", "cf-err"))
+cf_out_file = os.path.join(odir, ncfile.replace(".nc", ".cf-log"))
+cf_err_file = os.path.join(odir, ncfile.replace(".nc", ".cf-err"))
 
 
 run_cmd = ["cf-checker", "-a", AREATABLE, "-s", STDNAMETABLE, "-v", "auto", file]
