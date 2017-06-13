@@ -1,11 +1,12 @@
 # OUTPUT
 CF-OUTPUT/
+CF-OUTPUT-OLD/
 lotuts-logs/
 venv/
 *.log
 *.out
 *.xml
-
+setup_venv.sh
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

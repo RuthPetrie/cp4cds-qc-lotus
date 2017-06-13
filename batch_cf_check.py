@@ -7,7 +7,7 @@ files_per_batch = 2000
 srt_idx = start * files_per_batch
 end_idx = srt_idx + files_per_batch
 
-with open("cp4cds_filelist.log", 'r') as fr:
+with open("cp4cds_filelist2.log", 'r') as fr:
     files = fr.readlines()
 
 for file in files[srt_idx: end_idx]:
