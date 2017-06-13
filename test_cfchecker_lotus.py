@@ -4,9 +4,9 @@ from subprocess import call
 
 file = argv[1]
 
-GWSDIR = "/group_workspaces/jasmin/cp4cds1/qc/CFchecks/CF-OUTPUT/"
-AREATABLE = "/group_workspaces/jasmin/cp4cds1/qc/CFchecks/area-type-table.xml"
-STDNAMETABLE = "/group_workspaces/jasmin/cp4cds1/qc/CFchecks/cf-standard-name-table.xml"
+GWSDIR = "/group_workspaces/jasmin/cp4cds1/qc/QCchecks/CF-OUTPUT/"
+AREATABLE = "/group_workspaces/jasmin/cp4cds1/qc/QCchecks/area-type-table.xml"
+STDNAMETABLE = "/group_workspaces/jasmin/cp4cds1/qc/QCchecks/cf-standard-name-table.xml"
 institute, model, experiment, frequency, realm, table, ensemble, version, variable, ncfile = file.split('/')[6:]
 
 

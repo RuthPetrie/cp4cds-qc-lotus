@@ -1,12 +1,20 @@
 # OUTPUT
 CF-OUTPUT/
 CF-OUTPUT-OLD/
+CEDA*
 lotuts-logs/
 venv/
 *.log
 *.out
 *.xml
+.x*
 setup_venv.sh
+
+# CEDA-CC
+Rec.json
+Rec.txt
+cccc*
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
