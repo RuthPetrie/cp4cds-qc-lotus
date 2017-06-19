@@ -1,6 +1,6 @@
 #!/bin/bash
 
-odir=lotus-logs-cedacc
+odir=lotus-logs-cedacc2
 mkdir -p $odir
 
 for batch in $(seq 0 101); do

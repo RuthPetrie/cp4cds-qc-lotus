@@ -1,7 +1,8 @@
 #!/bin/bash
 
-mkdir -p lotus-logs
+odir=$lotusLogsCF2
+mkdir -p $odir
 
 for batch in $(seq 0 101); do
-    bsub -o ./lotus-logs/%J.out -W 02:00  python2.7 batch_cf_check.py $batch
+    bsub -o ./$odir/%J.out -W 24:00  python2.7 batch_cf_check.py $batch
 done

@@ -18,11 +18,11 @@ if not os.path.exists(odir):
 cf_out_file = os.path.join(odir, ncfile.replace(".nc", ".cf-log"))
 cf_err_file = os.path.join(odir, ncfile.replace(".nc", ".cf-err"))
 
-
-#run_cmd = ["cf-checker", "-a", AREATABLE, "-s", STDNAMETABLE, "-v", "auto", file]
-run_cmd = ["cf-checker", "-v", "auto", file]
-cf_out = open(cf_out_file, "w")
-cf_err = open(cf_err_file, "w")
-call(run_cmd, stdout=cf_out, stderr=cf_err)
-cf_out.close()
-cf_err.close()
+if os.path.getsize(cf_err_file) != 0:
+    #run_cmd = ["cf-checker", "-a", AREATABLE, "-s", STDNAMETABLE, "-v", "auto", file]
+    run_cmd = ["cf-checker", "-v", "auto", file]
+    cf_out = open(cf_out_file, "w")
+    cf_err = open(cf_err_file, "w")
+    call(run_cmd, stdout=cf_out, stderr=cf_err)
+    cf_out.close()
+    cf_err.close()
